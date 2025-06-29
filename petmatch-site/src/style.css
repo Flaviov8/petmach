@@ -1,0 +1,412 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.app {
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b6b, #ffa726);
+    color: white;
+    box-shadow: 0 2px 20px rgba(255, 107, 107, 0.3);
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Card Stack */
+.card-stack {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 500px;
+    margin-bottom: 30px;
+}
+
+.pet-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: grab;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.pet-card.dragging {
+    cursor: grabbing;
+    z-index: 1000;
+}
+
+.pet-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    background: #f0f0f0;
+}
+
+.pet-info {
+    padding: 20px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pet-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.pet-age {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.pet-description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-reject {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+}
+
+.btn-like {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.btn-text {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+/* Match Modal */
+.match-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.match-modal.show {
+    display: flex;
+}
+
+.match-content {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+    animation: slideUp 0.5s ease;
+}
+
+.match-header h2 {
+    font-size: 1.8rem;
+    color: #4ecdc4;
+    margin-bottom: 10px;
+}
+
+.match-header p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.match-pet-info {
+    margin-bottom: 25px;
+}
+
+.match-pet-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.match-pet-age {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+}
+
+.continue-btn {
+    display: block;
+    width: 100%;
+    background: #f0f0f0;
+    color: #666;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.continue-btn:hover {
+    background: #e0e0e0;
+}
+
+/* No More Cards */
+.no-more-cards {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.no-more-cards.show {
+    display: block;
+}
+
+.no-cards-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.no-cards-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.restart-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card-swipe-left {
+    animation: swipeLeft 0.5s ease forwards;
+}
+
+.card-swipe-right {
+    animation: swipeRight 0.5s ease forwards;
+}
+
+@keyframes swipeLeft {
+    to {
+        transform: translateX(-100%) rotate(-30deg);
+        opacity: 0;
+    }
+}
+
+@keyframes swipeRight {
+    to {
+        transform: translateX(100%) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .app {
+        max-width: 100%;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+    
+    .card-stack {
+        max-width: 100%;
+        height: 450px;
+    }
+    
+    .action-buttons {
+        gap: 20px;
+    }
+    
+    .btn {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .btn-icon {
+        font-size: 1.3rem;
+    }
+    
+    .btn-text {
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .app {
+        max-width: 450px;
+    }
+    
+    .card-stack {
+        max-width: 380px;
+        height: 550px;
+    }
+}
+
+/* Touch feedback */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+        transform: none;
+    }
+    
+    .btn:active {
+        transform: scale(0.95);
+    }
+    
+    .pet-card:hover {
+        transform: none;
+    }
+}
+

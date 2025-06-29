@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMatch - Adoção de Animais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>🐾 PetMatch</h1>
+                <p>Encontre seu novo melhor amigo</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Card Stack -->
+            <div class="card-stack" id="cardStack">
+                <!-- Cards will be dynamically generated here -->
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-reject" id="rejectBtn">
+                    <span class="btn-icon">❌</span>
+                    <span class="btn-text">Não</span>
+                </button>
+                <button class="btn btn-like" id="likeBtn">
+                    <span class="btn-icon">❤️</span>
+                    <span class="btn-text">Adotar</span>
+                </button>
+            </div>
+
+            <!-- Match Modal -->
+            <div class="match-modal" id="matchModal">
+                <div class="match-content">
+                    <div class="match-header">
+                        <h2>🎉 É um Match!</h2>
+                        <p>Você demonstrou interesse em adotar este animal!</p>
+                    </div>
+                    <div class="match-pet-info" id="matchPetInfo">
+                        <!-- Pet info will be inserted here -->
+                    </div>
+                    <div class="match-actions">
+                        <a href="#" class="whatsapp-btn" id="whatsappBtn" target="_blank">
+                            <span class="whatsapp-icon">📱</span>
+                            Conversar no WhatsApp
+                        </a>
+                        <button class="continue-btn" id="continueBtn">Continuar procurando</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No More Cards -->
+            <div class="no-more-cards" id="noMoreCards">
+                <div class="no-cards-content">
+                    <h2>🐕 Fim dos pets por hoje!</h2>
+                    <p>Você viu todos os animais disponíveis para adoção.</p>
+                    <button class="restart-btn" id="restartBtn">Ver novamente</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Feito com ❤️ para conectar pets e famílias</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
