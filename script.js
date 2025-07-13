@@ -5,7 +5,7 @@ const pets = [
         name: "Zeus",
         age: "2 anos",
         description: "Um cachorro carinhoso e brincalhão, adora crianças e outros pets. Já castrado e vacinado.",
-        image: "assets/images/cachorro1.jpeg",
+        image: "cachorro1.jpeg",
         whatsapp: "5511999999999"
     },
     {
@@ -13,7 +13,7 @@ const pets = [
         name: "Luna",
         age: "1 ano",
         description: "Gatinha dócil e independente, perfeita para apartamento. Muito carinhosa e adora carinho.",
-        image: "assets/images/gato1.jpg",
+        image: "gato1.jpg",
         whatsapp: "5511888888888"
     },
     {
@@ -21,7 +21,7 @@ const pets = [
         name: "Max",
         age: "3 anos",
         description: "Cachorro de porte médio, muito leal e protetor. Ideal para famílias com casa e quintal.",
-        image: "assets/images/cachorro2.jpg",
+        image: "cachorro2.jpg",
         whatsapp: "5511777777777"
     },
     {
@@ -29,7 +29,7 @@ const pets = [
         name: "Mimi",
         age: "6 meses",
         description: "Gatinha filhote muito brincalhona, adora brinquedos e é muito sociável com outros gatos.",
-        image: "assets/images/gato2.jpg",
+        image: "gato2.jpg",
         whatsapp: "5511666666666"
     },
     {
@@ -37,7 +37,7 @@ const pets = [
         name: "Buddy",
         age: "4 anos",
         description: "Cachorro calmo e obediente, perfeito para pessoas mais velhas. Muito companheiro.",
-        image: "assets/images/cachorro3.jpg",
+        image: "cachorro3.jpg",
         whatsapp: "5511555555555"
     },
     {
@@ -45,7 +45,7 @@ const pets = [
         name: "Whiskers",
         age: "2 anos",
         description: "Gato muito inteligente e curioso, adora explorar e brincar. Castrado e vacinado.",
-        image: "assets/images/gato3.png",
+        image: "gato3.png",
         whatsapp: "5511444444444"
     },
     {
@@ -53,7 +53,7 @@ const pets = [
         name: "Bella",
         age: "1 ano e 6 meses",
         description: "Cadela muito doce e amorosa, adora passear e brincar no parque. Ótima com crianças.",
-        image: "assets/images/cachorro4.jpg",
+        image: "cachorro4.jpg",
         whatsapp: "5511333333333"
     },
     {
@@ -61,7 +61,7 @@ const pets = [
         name: "Shadow",
         age: "3 anos",
         description: "Gato preto elegante e misterioso, muito carinhoso quando conhece bem a pessoa.",
-        image: "assets/images/gato4.jpg",
+        image: "gato4.jpg",
         whatsapp: "5511222222222"
     }
 ];
